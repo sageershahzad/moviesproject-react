@@ -1,0 +1,5 @@
+1.Passing the data
+2.Raising and handeling the events
+3.Multiple components in sync
+4.Functional components
+5.Lifecycle hooks
