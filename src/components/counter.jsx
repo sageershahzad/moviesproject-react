@@ -1,41 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 class Counter extends Component {
-
-  //state is a special property in react component basically it is an object 
+  //state is a special property in react component basically it is an object
   //that include any data that this component need
-  state = {
-    count: 0
-  };
+  state = { count: this.props.value };
 
   //eventhandeler
-  handleIncrement = product => {
-    this.setState({ count: this.state.count + 1 })
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
   };
 
-
   render() {
-
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={() => this.handleIncrement({ id: 1 })}
-          className={"btn btn-primary m-2"}>
+          onClick={this.handleIncrement}
+          className={"btn btn-primary m-2"}
+        >
           Increment
-                </button>
+        </button>
       </div>
     );
   }
 
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
-    classes += (this.state.count === 0) ? "warning" : "primary";
+    classes += this.state.count === 0 ? "warning" : "primary";
     return classes;
   }
 
   formatCount() {
     const { count } = this.state;
-    return count === 0 ? 'Zero' : count;
+    return count === 0 ? "Zero" : count;
   }
 }
 
