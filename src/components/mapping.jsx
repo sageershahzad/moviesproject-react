@@ -5,7 +5,7 @@ import React from "react";
 // these components are updating, and rendering with React.
 export let magazineList = [
   { title: "What is this", author: "Khan Mabo", pages: 440 },
-  { title: "Your body and my desire", author: "Mr Lover", pages: 339 },
+  { title: "Your body and soul", author: "Mr Lover", pages: 339 },
   { title: "Water in the moon", author: "Amazing Man", pages: 540 }
 ];
 const Magazine = ({ title, author, pages }) => {
